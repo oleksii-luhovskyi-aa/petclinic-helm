@@ -80,7 +80,7 @@ nodeSelector: {}
 tolerations: []
 
 affinity:
-  nodeAntiAffinity:
+  podAntiAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
