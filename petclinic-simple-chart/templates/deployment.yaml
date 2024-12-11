@@ -36,14 +36,6 @@ spec:
           ports:
             - containerPort: 8081
               protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: 8081
-          readinessProbe:
-            httpGet:
-              path: /
-              port: 8081
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
