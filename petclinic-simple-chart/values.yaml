@@ -79,4 +79,13 @@ nodeSelector: {}
 
 tolerations: []
 
-affinity: {}
+affinity:
+  nodeAntiAffinity:
+    requiredDuringSchedulingIgnoredDuringExecution:
+      - labelSelector:
+          matchExpressions:
+            - key: "petclinic-app"
+              operator: In
+              values:
+                - petclinic
+        topologyKey: "kubernetes.io/hostname"
