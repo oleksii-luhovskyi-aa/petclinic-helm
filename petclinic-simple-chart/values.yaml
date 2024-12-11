@@ -84,7 +84,7 @@ affinity:
     requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
-            - key: "petclinic-app"
+            - key: "app"
               operator: In
               values:
                 - petclinic

@@ -48,6 +48,7 @@ Selector labels
 {{- define "petclinic-simple-chart.selectorLabels" -}}
 app.kubernetes.io/name: {{ include "petclinic-simple-chart.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
+app: petclinic
 {{- end }}
 
 {{/*
