@@ -4,5 +4,6 @@ metadata:
   name: {{ include "petclinic-simple-chart.configname" . }}
 data:
   topic.name: "petclinic-topic"
+  app.version: "v1"
 
   #{{- toYaml . | nindent 2 }}
