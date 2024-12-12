@@ -35,7 +35,7 @@ spec:
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           envFrom:
             - configMapRef:
-                name: {{- include "petclinic-simple-chart.configname" . }}
+                name: {{ include "petclinic-simple-chart.configname" . }}
           ports:
             - containerPort: 8081
               protocol: TCP
