@@ -68,3 +68,10 @@ Create the name of the Config Map to use
 {{- define "petclinic-simple-chart.configname" -}}
 {{- printf "%s" .Values.configMap.name }}
 {{- end }}
+
+{{/*
+Create the name of the Cluster role to use
+*/}}
+{{- define "petclinic-simple-chart.clusterrolename" -}}
+{{- printf "%s" .Values.clusterRole.name }}
+{{- end }}

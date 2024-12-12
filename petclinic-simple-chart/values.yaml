@@ -21,7 +21,7 @@ serviceAccount:
   annotations: {}
   # The name of the service account to use.
   # If not set and create is true, a name is generated using the fullname template
-  name: ""
+  name: "pubsub-petclinic-manager@atlantean-yeti-440716-a1.iam.gserviceaccount.com"
 
 podAnnotations: {}
 
@@ -92,3 +92,6 @@ affinity:
 
 configMap:
   name: petclinic-cm
+
+clusterRole:
+  name: petclinic-cluster-role
