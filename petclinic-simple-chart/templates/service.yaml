@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: {{ include "petclinic-simple-chart.fullname" . | nindent 1 }}
+  name: {{ include "petclinic-simple-chart.fullname" . }}
   labels:
     {{- include "petclinic-simple-chart.labels" . | nindent 4 }}
 spec:
