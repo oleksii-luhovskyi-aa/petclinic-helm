@@ -5,6 +5,5 @@ metadata:
 data:
   # Config data
   petclinic_topic_name: petclinic-topic
-  petclinic_version: v1
 
   #{{- toYaml . | nindent 2 }}
