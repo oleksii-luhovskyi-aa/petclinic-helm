@@ -63,5 +63,5 @@ Create the name of the service account to use
 {{- end }}
 
 {{- define "petclinic-simple-chart.configname" -}}
-{{- print petclinic-cm }}
+{{- print petclinic-cm | trunc 63 | trimSuffix "-" }}
 {{- end }}
