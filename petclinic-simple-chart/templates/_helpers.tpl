@@ -66,5 +66,5 @@ Create the name of the service account to use
 Create the name of the Config Map to use
 */}}
 {{- define "petclinic-simple-chart.configname" -}}
-{{- printf "%s" petclinic-cm }}
+{{- printf "%s" .Values.cofigMap.name }}
 {{- end }}

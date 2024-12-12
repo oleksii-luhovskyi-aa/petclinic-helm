@@ -90,5 +90,8 @@ affinity:
                 - petclinic
         topologyKey: "kubernetes.io/hostname"
 
+configMap:
+  name: petclinic-cm
+
 data:
   PETCLINIC_TOPIC_NAME=petclinic-topic
