@@ -3,4 +3,5 @@ kind: ConfigMap
 metadata:
   name: {{ include "petclinic-simple-chart.configname" . }}
 data:
-  topic_name: "petclinic-topic"
+  TOPIC_ID: "petclinic-topic"
+  PROJECT_ID: "atlantean-yeti-440716-a1"
