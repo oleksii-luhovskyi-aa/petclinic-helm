@@ -1,9 +1,8 @@
-apiVersion: apps/v1
+apiVersion: v1
 kind: ConfigMap
 metadata:
   name: {{ include "petclinic-simple-chart.configname" . }}
 data:
-  # Config data
-  petclinic_topic_name: petclinic-topic
+  topic.name: petclinic-topic
 
   #{{- toYaml . | nindent 2 }}
