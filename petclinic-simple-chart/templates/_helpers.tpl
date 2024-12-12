@@ -62,6 +62,9 @@ Create the name of the service account to use
 {{- end }}
 {{- end }}
 
+{{/*
+Create the name of the Config Map to use
+*/}}
 {{- define "petclinic-simple-chart.configname" -}}
 {{- print petclinic-cm | trunc 63 | trimSuffix "-" }}
 {{- end }}
