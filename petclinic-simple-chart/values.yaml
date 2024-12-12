@@ -94,5 +94,5 @@ configMap:
   name: "petclinic-cm"
 
 data:
-  PETCLINIC_TOPIC_NAME=petclinic-topic
-  PETCLINIC_VERSION=v1
+  PETCLINIC_TOPIC_NAME: petclinic-topic
+  PETCLINIC_VERSION: v1
