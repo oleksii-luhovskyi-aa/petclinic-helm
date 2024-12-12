@@ -3,6 +3,6 @@ kind: ConfigMap
 metadata:
   name: {{ include "petclinic-simple-chart.configname" . }}
 data:
-  topic.name: petclinic-topic
+  topic.name: "petclinic-topic"
 
   #{{- toYaml . | nindent 2 }}
