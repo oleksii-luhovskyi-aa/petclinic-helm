@@ -7,7 +7,7 @@ spec:
     istio: ingressgateway
   servers:
     - port:
-        number: 80
+        number: 8080
         name: http
         protocol: HTTP
       hosts:
@@ -23,5 +23,10 @@ spec:
   gateways:
     - petclinic-gateway
   http:
-    - route:
-    - destination:
+    - match:
+        - port: 8080
+      route:
+      - destination:
+          host: petclinic
+          port:
+            number: 8080
