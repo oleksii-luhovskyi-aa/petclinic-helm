@@ -23,19 +23,21 @@ spec:
   gateways:
     - petclinic-gateway
   http:
-  - match:
-      - uri:
-        prefix: app1
+  - name: "route-config-1"
+    match:
+    - uri:
+      prefix: "/app1"
     route:
     - destination:
-        host: petclinic
+        host: app1.default.svc.cluster.local
         port:
           number: 8080
-  - match:
-      - uri:
-        prefix: app2
+  - name: "route-config-2"
+    match:
+    - uri:
+      prefix: "/app2"
     route:
     - destination:
-        host: petclinic-clone
+        host: app2.default.svc.cluster.local
         port:
           number: 80
