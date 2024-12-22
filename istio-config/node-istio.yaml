@@ -12,32 +12,32 @@ spec:
         protocol: HTTP
       hosts:
         - "*"
----
-apiVersion: networking.istio.io/v1
-kind: VirtualService
-metadata:
-  name: petclinic
-spec:
-  hosts:
-    - "*"
-  gateways:
-    - petclinic-gateway
-  http:
-  - name: "route-config-1"
-    match:
-    - uri:
-      prefix: "/app1"
-    route:
-    - destination:
-        host: app1.default.svc.cluster.local
-        port:
-          number: 8080
-  - name: "route-config-2"
-    match:
-    - uri:
-      prefix: "/app2"
-    route:
-    - destination:
-        host: app2.default.svc.cluster.local
-        port:
-          number: 80
+#---
+#apiVersion: networking.istio.io/v1
+#kind: VirtualService
+#metadata:
+#  name: petclinic
+#spec:
+#  hosts:
+#    - "*"
+#  gateways:
+#    - petclinic-gateway
+#  http:
+#  - name: "route-config-1"
+#    match:
+#    - uri:
+#      prefix: "/app1"
+#    route:
+#    - destination:
+#        host: app1.default.svc.cluster.local
+#        port:
+#          number: 8080
+#  - name: "route-config-2"
+#    match:
+#    - uri:
+#      prefix: "/app2"
+#    route:
+#    - destination:
+#        host: app2.default.svc.cluster.local
+#        port:
+#          number: 80
