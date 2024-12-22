@@ -32,12 +32,12 @@ spec:
         host: app1.default.svc.cluster.local
         port:
           number: 8080
-#  - name: "route-config-2"
-#    match:
-#    - uri:
-#      prefix: "/app2"
-#    route:
-#    - destination:
-#        host: app2.default.svc.cluster.local
-#        port:
-#          number: 80
+  - name: "route-config-2"
+    match:
+    - uri:
+        prefix: "/app2"
+    route:
+    - destination:
+        host: app2.default.svc.cluster.local
+        port:
+          number: 80
