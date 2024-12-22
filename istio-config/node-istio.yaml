@@ -1,4 +1,4 @@
-apiVersion: networking.istio.io/v1
+apiVersion: networking.istio.io/v1beta1
 kind: Gateway
 metadata:
   name: petclinic-gateway
@@ -13,7 +13,7 @@ spec:
       hosts:
         - "*"
 ---
-apiVersion: networking.istio.io/v1
+apiVersion: networking.istio.io/v1beta1
 kind: VirtualService
 metadata:
   name: petclinic-routing
