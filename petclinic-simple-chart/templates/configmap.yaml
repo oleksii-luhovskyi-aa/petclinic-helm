@@ -1,3 +1,4 @@
+{{- if .Values.needRecreate -}}
 apiVersion: v1
 kind: ConfigMap
 metadata:
@@ -5,3 +6,4 @@ metadata:
 data:
   TOPIC_ID: "petclinic-topic"
   PROJECT_ID: "atlantean-yeti-440716-a1"
+{{- end }}

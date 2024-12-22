@@ -101,3 +101,5 @@ configMap:
 
 clusterRole:
   name: petclinic-cluster-role
+
+needRecreate: true
