@@ -24,9 +24,18 @@ spec:
     - petclinic-gateway
   http:
     - match:
-        - port: 8080
+        - uri:
+          prefix: app1
       route:
       - destination:
           host: petclinic
           port:
             number: 8080
+    - match:
+        - uri:
+          prefix: app2
+      route:
+      - destination:
+          host: petclinic-clone
+          port:
+            number: 80
