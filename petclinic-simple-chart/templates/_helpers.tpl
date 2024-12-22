@@ -49,6 +49,7 @@ Selector labels
 app.kubernetes.io/name: {{ include "petclinic-simple-chart.name" . }}
 app.kubernetes.io/instance: {{ .Release.Name }}
 app: petclinic
+istio: ingressgateway
 {{- end }}
 
 {{/*
