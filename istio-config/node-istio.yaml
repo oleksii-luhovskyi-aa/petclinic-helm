@@ -31,7 +31,7 @@ spec:
       uri: /
     route:
     - destination:
-        host: app1.default.svc.cluster.local
+        host: deployment-app1-petclinic-simple-char.default.svc.cluster.local
         port:
           number: 8080
   - name: "route-config-2"
@@ -42,6 +42,6 @@ spec:
       uri: /
     route:
     - destination:
-        host: app2.default.svc.cluster.local
+        host: deployment-app2-petclinic-simple-char.default.svc.cluster.local
         port:
           number: 80
