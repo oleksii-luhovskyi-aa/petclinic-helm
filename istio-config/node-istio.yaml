@@ -11,13 +11,13 @@ spec:
       name: http
       protocol: HTTP
     hosts:
-      - deployment-app1-petclinic-simple-char.default.svc.cluster.local
+      - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
   - port:
       number: 80
       name: http
       protocol: HTTP
     hosts:
-      - deployment-app2-petclinic-simple-char.default.svc.cluster.local
+      - deployment-app2-petclinic-simple-chart.default.svc.cluster.local
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
@@ -25,8 +25,8 @@ metadata:
   name: petclinic-routing
 spec:
   hosts:
-  - deployment-app1-petclinic-simple-char.default.svc.cluster.local
-  - deployment-app2-petclinic-simple-char.default.svc.cluster.local
+  - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
+  - deployment-app2-petclinic-simple-chart.default.svc.cluster.local
   gateways:
     - petclinic-gateway
   http:
@@ -38,7 +38,7 @@ spec:
       uri: /
     route:
     - destination:
-        host: deployment-app1-petclinic-simple-char.default.svc.cluster.local
+        host: deployment-app1-petclinic-simple-chart.default.svc.cluster.local
         port:
           number: 8080
   - name: "route-config-2"
@@ -49,6 +49,6 @@ spec:
       uri: /
     route:
     - destination:
-        host: deployment-app2-petclinic-simple-char.default.svc.cluster.local
+        host: deployment-app2-petclinic-simple-chart.default.svc.cluster.local
         port:
           number: 80
