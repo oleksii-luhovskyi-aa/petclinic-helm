@@ -6,12 +6,18 @@ spec:
   selector:
     istio: ingressgateway
   servers:
-    - port:
-        number: 80
-        name: http
-        protocol: HTTP
-      hosts:
-        - "*"
+  - port:
+      number: 8080
+      name: http
+      protocol: HTTP
+    hosts:
+      - deployment-app1-petclinic-simple-char.default.svc.cluster.local
+  - port:
+      number: 80
+      name: http
+      protocol: HTTP
+    hosts:
+      - deployment-app2-petclinic-simple-char.default.svc.cluster.local
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
