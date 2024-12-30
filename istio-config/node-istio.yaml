@@ -19,7 +19,8 @@ metadata:
   name: petclinic-routing
 spec:
   hosts:
-    - "*"
+    - "deployment-app1-petclinic-simple-char.default.svc.cluster.local"
+    - "deployment-app2-petclinic-simple-char.default.svc.cluster.local"
   gateways:
     - petclinic-gateway
   http:
