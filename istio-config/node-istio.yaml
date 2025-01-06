@@ -1,25 +1,25 @@
-apiVersion: networking.istio.io/v1alpha3
-kind: Gateway
-metadata:
-  name: petclinic-gateway
-  namespace: default
-spec:
-  selector:
-    istio: ingressgateway
-  servers:
-  - port:
-      number: 8080
-      name: http
-      protocol: HTTP
-    hosts:
-      - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
-  - port:
-      number: 80
-      name: http
-      protocol: HTTP
-    hosts:
-      - deployment-app2-petclinic-simple-chart.default.svc.cluster.local
----
+#apiVersion: networking.istio.io/v1alpha3
+#kind: Gateway
+#metadata:
+#  name: petclinic-gateway
+#  namespace: default
+#spec:
+#  selector:
+#    istio: ingressgateway
+#  servers:
+#  - port:
+#      number: 8080
+#      name: http
+#      protocol: HTTP
+#    hosts:
+#      - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
+#  - port:
+#      number: 80
+#      name: http
+#      protocol: HTTP
+#    hosts:
+#      - deployment-app2-petclinic-simple-chart.default.svc.cluster.local
+#---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
 metadata:
@@ -29,8 +29,8 @@ spec:
   hosts:
   - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
   - deployment-app2-petclinic-simple-chart.default.svc.cluster.local
-  gateways:
-    - petclinic-gateway
+#  gateways:
+#    - petclinic-gateway
   http:
   - name: "route-config-1"
     match:
