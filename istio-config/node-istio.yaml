@@ -7,15 +7,15 @@ spec:
   selector:
     istio: ingress
   servers:
-  - port:
-      name: http1
-      number: 8080
-      protocol: HTTP
-    hosts:
-      - "*"
+#  - port:
+#      name: http1
+#      number: 8080
+#      protocol: HTTP
+#    hosts:
+#      - "*"
 #      - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
   - port:
-      name: http2
+      name: http
       number: 80
       protocol: HTTP
     hosts:
