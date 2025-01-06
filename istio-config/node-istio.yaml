@@ -12,13 +12,15 @@ spec:
       number: 8080
       protocol: HTTP
     hosts:
-      - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
+      - "*"
+#      - deployment-app1-petclinic-simple-chart.default.svc.cluster.local
   - port:
       name: http2
       number: 80
       protocol: HTTP
     hosts:
-      - deployment-app2-petclinic-simple-chart.default.svc.cluster.local
+      - "*"
+#      - deployment-app2-petclinic-simple-chart.default.svc.cluster.local
 ---
 apiVersion: networking.istio.io/v1alpha3
 kind: VirtualService
